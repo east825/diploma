@@ -1,0 +1,190 @@
+% vim: fenc=utf-8
+
+\documentclass{beamer}
+
+% Should not be used with xelatex
+% \usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{minted}
+\ifxetex
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
+  \setmainfont{Times New Roman}
+  \setmonofont{Consolas}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\fi
+
+% Beamer settings
+\mode<presentation>
+{
+  % Variant #1
+  \usetheme{Madrid}
+  \usecolortheme{Seagull}
+  % \usecolortheme{Spruce}
+
+  % Variant #2
+  % \usetheme{EastLansing}
+  % \useinnertheme{rounded}
+
+  \usefonttheme{serif}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{itemize item}{$\Box$}
+  % \setbeamertemplate{title page}
+  % {
+    % \begin{centering}
+      % \insertinstitute
+      % \vfill
+      % \begin{beamercolorbox}[sep=8pt,center]{title}
+        % {\usebeamerfont{title}\usebeamerfont{title}\inserttitle}
+      % \end{beamercolorbox}
+    % \end{centering}
+    % \vfill
+  % }
+} 
+
+
+% Minted settings
+\usemintedstyle{trac}
+% \definecolor{bg}{rgb}{0.10, 0.10, 0.10}
+\newminted{python}{fontsize=\scriptsize}
+
+% Miscellaneous customization
+ 
+
+% Header and metainfo
+\title[Вывод типов]{Вывод типов для динамически типизированного языка в 
+интегрированной среде разработки}
+\author{Голубев Михаил}
+\institute[ИИТУ]{
+  Санкт-Петербургский государственный политехнический университет \\
+  Институт информационных технологий и управления \\
+  Кафедра компьютерных систем и программных технологий
+}
+\date{октябрь 2013}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Титульный слайд
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+% Постановка задачи
+\begin{frame}{Постановка задачи}
+  \begin{block}{Задача}
+    Разработать систему вывода типов в средах разработки для динамически типизированных языков.
+    \footnotemark[1]
+  \end{block}
+  \footnotetext[1]{Первоначальная реализация для языка Python и платформы IntelliJ (PyCharm)}
+\end{frame}
+
+
+% Проблемы и ограничения
+\begin{frame}{Проблемы и ограничения}
+  Анализ
+  \begin{itemize}
+    \item должен выполняться быстро \emph{(анализ “на лету” vs. пакетные анализаторы)}
+    \item должен быть работать с незавершенными/частично корректными программами \emph{(как и всегда для сред разработки)}
+    \item точность результатов важнее полноты \emph{(потому что все ошибки, все равно не найти)}
+  \end{itemize}
+
+  Основная сложность --- принимаемые/возвращаемые значения функций 
+  ($\Rightarrow$ нелокальный анализ), а также динамические “трюки”: \texttt{monkey-patching}, 
+  \texttt{descriptors}, \texttt{import-hooks}, \texttt{exec/eval}, различные средства интроспекции и пр.
+\end{frame}
+
+
+\begin{frame}[fragile]{Пример}
+Программа на Python + PyQt4
+
+\begin{pythoncode}
+import os
+import son
+from PyQt4.QtCore import QSettings
+
+if __name__ == '__main__':
+    s = QSettings()
+    path = s.value('ConfigPath', '~/.settings')
+    path = os.path.expanduser(path)
+    with open(path, 'r') as f:
+        config = json.load(f)
+\end{pythoncode}
+\end{frame}
+
+
+\begin{frame}[fragile]{Пример (продолжение)}{Результат запуска}
+\begin{pythoncode}
+Traceback (most recent call last):
+File "C: /Users/Mikhail/home/development/repos/diploma/samples/errors/qsettings.py", line 10, in <module>
+path = os.path.expanduser(path)
+File "C:\Python27\lib\ntpath.py", line 279, in expanduser
+if path[:1] != '~':
+TypeError: 'QVariant' object has no attribute '__getitem__'
+\end{pythoncode}
+\end{frame}
+
+
+\begin{frame}[fragile]{Пример (продолжение)}{Исправленная версия}
+\begin{pythoncode}
+import os
+import json
+from PyQt4.QtCore import QSettings
+if __name__ == '__main__':
+   s = QSettings()
+   path = s.value('ConfigPath', '~/.settings').toString()
+   path = os.path.expanduser(path)
+   with open(path, 'r') as f:
+       config = json.load(f)
+\end{pythoncode}
+\end{frame}
+
+
+\begin{frame}[fragile]{Пример (продолжение)}{Результат запуска}
+\begin{pythoncode}
+Traceback (most recent call last): 
+File "C: /Users/Mikhail/home/development/repos/diploma/samples/errors/qsettings.
+py", line 10, in <module>
+ path = os.path.expanduser(path)
+ File "C:\Python27\lib\ntpath.py", line 282, in expanduser
+ while i < n and path[i] not in '/\\':
+TypeError: 'in <string>' requires string as left operand, not QString
+\end{pythoncode}
+\end{frame}
+
+
+\begin{frame}[fragile]{Пример (продолжение)}{Итоговая версия}
+\begin{pythoncode}
+import os
+import json
+from PyQt4.QtCore import QSettings
+if __name__ == '__main__':
+    s = QSettings()
+    path = unicode(s.value('ConfigPath', '~/.settings').toString() )
+    path = os.path.expanduser(path)
+    with open(path, 'r') as f:
+        config = json.load(f)
+\end{pythoncode}
+
+Теперь все работает\ldots
+
+\end{frame}
+
+\begin{frame}{Текущее состояние}
+\begin{itemize}
+  \item Поиск литературы \\
+  \small{\emph{Много материалов про вывод типов в целом, не так много про вывод в динамически типизированных языках}}
+
+  \item Анализ существующих решений
+    \begin{itemize}
+      \item Подходы к работе с типами в PyCharm и других средах JetBrains: 
+      RubyMine, PhpStrom, WebStorm
+      \item Инструменты PyFlakes, PyLint
+    \end{itemize}
+\end{itemize}
+\end{frame}
+\end{document}
