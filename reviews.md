@@ -106,7 +106,7 @@ SomeString и коллекциями: `SomeTuple`, `SomeList`, `SomeDict`. Вс�
 дальше рассматривать RPython нецелесообразно.
 
 
-Frédéric Pluquet, et al. [Fast type reconstruction for dynamically typed programming languages][5]
+Frédéric Pluquet, et al. ["Fast type reconstruction for dynamically typed programming languages"][5]
 -------------------------------------------------------------------------------------------------
 
 Интересная статья. Посвящена выводу типов в Smalltalk. Акцент сделан на малое время анализа
@@ -155,7 +155,7 @@ Python `property`?). После этого по иерархии всех изв
 собираемую во время исполнения тестовых программ. Как ни странно, несмотря на все допущения, эксперименты указывают на
 75% точность результатов.
 
-Michael Furr, et al. [Static Type Inference for Ruby][6]
+Michael Furr, et al. ["Static Type Inference for Ruby"][6]
 --------------------------------------------------------
 
 На данный момент самая подробная статья из прочитанных. Авторы разработали инструмент DRuby[], который выполняет
@@ -193,6 +193,7 @@ TODO: написать больше про статью.
 [3]: http://dl.acm.org/citation.cfm?id=1862665
 [4]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.1457
 [5]: http://dl.acm.org/citation.cfm?id=1640145
+[6]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.144.5525
 
 [cannon]: http://ca.linkedin.com/in/drbrettcannon
 [aiken]: http://theory.stanford.edu/~aiken/publications/publications.html
