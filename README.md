@@ -5,11 +5,13 @@ in this [one][PyCharm].
 
 ---
 
-There is nothing to look at especially if you don't speak Russian, so pass through.
+There is nothing to look at especially if you don't speak Russian, so pass by.
 
 ### Presentations:
 
-* [Presentation #1][p1]
+* [Аттестация #1][p1]
+* [Неделя науки][p2]
 
-[p1]: https://dl.dropboxusercontent.com/u/14502217/presentations/presentation-1.pdf
+[p1]: https://dl.dropboxusercontent.com/u/14502217/presentations/attestation-1.pdf
+[p2]: https://dl.dropboxusercontent.com/u/14502217/presentations/science-week.pdf
 [PyCharm]: http://www.jetbrains.com/pycharm/ "PyCharm"
