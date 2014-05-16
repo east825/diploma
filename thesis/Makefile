@@ -1,13 +1,18 @@
-.PHONY: preview build clean
+TARGET?=	thesis
+BIBFILE?=	thesis.bib
+NOMFILE?=	thesis.nlo
 
-preview: build
-	evince thesis.pdf
+TARGETFILES?=	preamble.tex \
+		settings.tex \
+		title.tex \
+		abstract.tex \
+		introduction.tex \
+		chapter01.tex \
+		chapter02.tex \
+		chapter03.tex \
+		conclusion.tex \
+		appendix01.tex
 
-build:
-	pdflatex thesis.tex
-	bibtex thesis.aux
-	pdflatex thesis.tex
-	pdflatex thesis.tex
+default: pdf-fast
 
-clean:
-	rm -f *.log *.aux *.pdf *.dvi *.toc *.bbl *.out *-blx.bib *.blg *.run.xml *.fdb_latexmk
+include include/latex.mk
