@@ -1,7 +1,7 @@
 /.idea/
-.py[co]
+/env/
 
+*.py[co]
 *.log
-
 ~*
 *.swp
