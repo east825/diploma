@@ -5,3 +5,17 @@
 *.log
 ~*
 *.swp
+
+# All kinds of LaTeX output
+*.aux
+*.blg
+*.toc
+*.fdb_latexmk
+*.nlo
+*.out
+*.ilg
+*.nls
+*.bbl
+
+*.pdf
+*.dvi

@@ -11,7 +11,7 @@ MAKEINDEX?=makeindex
 PDFLATEX?=pdflatex
 
 BIBTEXFLAGS?=-B -c gost/utf8cyrillic.csf
-LATEXFLAGS?=-src-specials
+LATEXFLAGS?=-src-specials -interaction=batchmode
 MAKEINDEXFLAGS?=-s nomencl.ist -o $(TARGET).nls
 PDFLATEXFLAGS?=--shell-escape
 

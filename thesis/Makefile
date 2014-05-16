@@ -13,6 +13,15 @@ TARGETFILES?=	preamble.tex \
 		conclusion.tex \
 		appendix01.tex
 
-default: pdf-fast
+PDF_VIEWER=	evince
+
+default: pdf
+
+preview-pdf: default
+	$(PDF_VIEWER) $(TARGET).pdf
+
+track-pdf: 
+	latexmk -pdf -pvc $(TARGET) &
+	$(PDF_VIEWER) $(TARGET).pdf
 
 include include/latex.mk
