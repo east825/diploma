@@ -4,31 +4,296 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-@ARTICLE{small,
-  author = {Freely, I.P.},
-  title = {A small paper},
-  journal = {The journal of small papers},
-  year = 1997,
-  volume = {-1},
-  note = {To appear},
+% Luca Cardelli
+@article{Cardelli1985,
+  author = {Luca Cardelli and Peter Wegner},
+  title = {On understanding types, data abstraction, and polymorphism},
+  journal = {ACM COMPUTING SURVEYS},
+  year = {1985},
+  volume = {17},
+  number = {4},
+  pages = {471--522},
+  url = {http://lucacardelli.name/Papers/OnUnderstanding.A4.pdf}
 }
 
-@ARTICLE{big,
-  author = {Jass, Hugh},
-  title = {A big paper},
-  journal = {The journal of big papers},
-  year = 7991,
-  volume = {MCMXCVII},
+@incollection{Cardelli2004,
+  author = {Luca Cardelli},
+  editor = {Allen B. Tucker},
+  title = {Type Systems},
+  chapter = {97},
+  booktitle = {The Computer Science and Engineering Handbook, Second Edition},
+  edition = {2},
+  year = {2004},
+  isbn = {978-0-203-49445-5},
+  publisher = {CRC Press},
+  url = {http://lucacardelli.name/Papers/TypeSystems.pdf}
+
 }
 
-@ARTICLE{russian,
-  author = {Василий Пупкин and Василиса Пупкина and Пупкинский, В.П.},
-  title = {Русская статья},
-  journal = {Научно-технические ведомости НИИ ЧАВО},
-  year = 2000,
-  number = 16,
-  pages = {32--64},
-  language = {russian},
+% Benjamin Pierce
+@book{Pierce2002,
+  author = {Pierce, Benjamin C.},
+  title = {Types and Programming Languages},
+  year = {2002},
+  isbn = {978-0-262-16209-1},
+  publisher = {MIT Press},
+  address = {Cambridge, MA, USA},
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ole Ageseen 
+@inproceedings{Agesen1994,
+  author = {Ole Agesen},
+  title = {Constraint-Based Type Inference and Parametric Polymorphism},
+  booktitle = {Proc. of the 1st International Static Analysis Symposium, volume 864 of LNCS},
+  year = {1994},
+  pages = {78--100},
+  publisher = {Springer-Verlag},
+  url = {http://www.cs.berkeley.edu/~fateman/264/papers/sas94.pdf}
+}
+
+@inproceedings{Agesen1995,
+  author = {Agesen, Ole},
+  title = {The Cartesian Product Algorithm: Simple and Precise Type Inference Of Parametric Polymorphism},
+  booktitle = {Proceedings of the 9th European Conference on Object-Oriented Programming},
+  series = {ECOOP '95},
+  year = {1995},
+  isbn = {3-540-60160-0},
+  pages = {2--26},
+  numpages = {25},
+  url = {http://dl.acm.org/citation.cfm?id=646153.679533},
+  acmid = {679533},
+  publisher = {Springer-Verlag},
+  address = {London, UK, UK},
+  keywords = {abstract types, concrete types, inheritance, polymorphism, self, type inference},
+} 
+
+% F. Ortin: Dynamic typing in C#
+@article{Ortin2011:inference,
+  author = {Ortin, Francisco},
+  title = {Type Inference to Optimize a Hybrid Statically and Dynamically Typed Language},
+  journal = {Comput. J.},
+  issue_date = {November 2011},
+  volume = {54},
+  number = {11},
+  month = 11,
+  year = {2011},
+  issn = {0010-4620},
+  pages = {1901--1924},
+  numpages = {24},
+  url = {http://dx.doi.org/10.1093/comjnl/bxr067},
+  doi = {10.1093/comjnl/bxr067},
+  acmid = {2139553},
+  publisher = {Oxford University Press},
+  address = {Oxford, UK},
+} 
+
+@article{Ortin2011:union,
+  author = {Ortin, Francisco and Garc\'{\i}a, Miguel},
+  title = {Union and Intersection Types to Support Both Dynamic and Static Typing},
+  journal = {Inf. Process. Lett.},
+  issue_date = {February, 2011},
+  volume = {111},
+  number = {6},
+  month = 2,
+  year = {2011},
+  issn = {0020-0190},
+  pages = {278--286},
+  numpages = {9},
+  url = {http://dx.doi.org/10.1016/j.ipl.2010.12.006},
+  doi = {10.1016/j.ipl.2010.12.006},
+  acmid = {1930166},
+  publisher = {Elsevier North-Holland, Inc.},
+  address = {Amsterdam, The Netherlands, The Netherlands},
+  keywords = {Compilers, Formal languages, Program specification, Programming languages, Type systems},
+} 
+
+% Papers: Ruby
+@inproceedings{Furr2009,
+  author = {Furr, Michael and An, Jong-hoon (David) and Foster, Jeffrey S. and Hicks, Michael},
+  title = {Static Type Inference for Ruby},
+  booktitle = {Proceedings of the 2009 ACM Symposium on Applied Computing},
+  series = {SAC '09},
+  year = {2009},
+  isbn = {978-1-60558-166-8},
+  location = {Honolulu, Hawaii},
+  pages = {1859--1866},
+  numpages = {8},
+  url = {http://doi.acm.org/10.1145/1529282.1529700},
+  doi = {10.1145/1529282.1529700},
+  acmid = {1529700},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+  keywords = {Ruby, contracts, dynamic typing, type inference},
+} 
+
+@mastersthesis{Madsen2007,
+  author = {Martin Madsen and Peter S{\o}rensen and Kristian Kristensen},
+  title = {Ecstatic --- Type Inference for Ruby Using the Cartesian Product Algorithm},
+  school = {Aalborg University},
+  month = 6,
+  year = 2007,
+  url = {http://projekter.aau.dk/projekter/files/61071016/1181807983.pdf}
+}
+
+% Papers: Python
+@inproceedings{Holkner2009,
+  author = {Holkner, Alex and Harland, James},
+  title = {Evaluating the Dynamic Behaviour of Python Applications},
+  booktitle = {Proceedings of the Thirty-Second Australasian Conference on Computer Science - Volume 91},
+  series = {ACSC '09},
+  year = {2009},
+  isbn = {978-1-920682-72-9},
+  location = {Wellington, New Zealand},
+  pages = {19--28},
+  numpages = {10},
+  url = {http://dl.acm.org/citation.cfm?id=1862659.1862665},
+  acmid = {1862665},
+  publisher = {Australian Computer Society, Inc.},
+  address = {Darlinghurst, Australia, Australia},
+  keywords = {Python and compilers, dynamic languages},
+}
+
+% TODO: check validity of conference reference
+@inproceedings{Aycock2000,
+  author = {John Aycock},
+  title = {Aggressive type inference},
+  booktitle = {Proceedings of the 8th international Python conference},
+  pages = {11 -- 20},
+  year = 2000
+}
+
+@mastersthesis{Cannon2005,
+  author = {Brett Cannon},
+  title = {Localized Type Inference of Atomic Types in Python},
+  school = {California Polytechnic State University},
+  month = 6,
+  year = 2005,
+  url = {http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.90.3231&rep=rep1&type=pdf}
+}
+
+@inproceedings{Ancona2007,
+  author = {Ancona, Davide and Ancona, Massimo and Cuni, Antonio and Matsakis, Nicholas D.},
+  title = {RPython: A Step Towards Reconciling Dynamically and Statically Typed OO Languages},
+  booktitle = {Proceedings of the 2007 Symposium on Dynamic Languages},
+  series = {DLS '07},
+  year = {2007},
+  isbn = {978-1-59593-868-8},
+  location = {Montreal, Quebec, Canada},
+  pages = {53--64},
+  numpages = {12},
+  url = {http://doi.acm.org/10.1145/1297081.1297091},
+  doi = {10.1145/1297081.1297091},
+  acmid = {1297091},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+  keywords = {.NET, JVM, Python},
+} 
+
+@misc{Salib2004,
+  author = {Michael Salib},
+  title = {Faster than C: Static Type Inference with Starkiller},
+  month = 3,
+  year = 2004,
+  note = {partially adapted from a draft of Master’s thesis},
+  url = {http://slc.grid.sinica.edu.tw/pub/ASGC/lang/Python/pycon/dc2004/papers/1/paper.pdf}
+}
+
+@misc{Tu,
+  author = {Stephen Tu},
+  title = {MINO: Data-driven approximate type inference for Python},
+  note = {MIT CSAIL},
+  url = {http://people.csail.mit.edu/stephentu/papers/mino.pdf}
+}
+
+@misc{Maya2011,
+  author = {Eva Maia and Nelma Moreira and Rogério Reis},
+  title = {A Static Type Inference for Python},
+  year = 2011,
+  url = {http://www.dcc.fc.up.pt/~nam/publica/artigoDYLA.pdf}
+}
+
+% Papers: Smalltalk
+@article{Pluquet2009,
+  author = {Pluquet, Fr{\'e}d{\'e}ric and Marot, Antoine and Wuyts, Roel},
+  title = {Fast Type Reconstruction for Dynamically Typed Programming Languages},
+  journal = {SIGPLAN Not.},
+  issue_date = {December 2009},
+  volume = {44},
+  number = {12},
+  month = 10,
+  year = {2009},
+  issn = {0362-1340},
+  pages = {69--78},
+  numpages = {10},
+  url = {http://doi.acm.org/10.1145/1837513.1640145},
+  doi = {10.1145/1837513.1640145},
+  acmid = {1640145},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+  keywords = {development environments, dynamic programming languages, type inference, type reconstruction},
+} 
+
+@article{Haldiman2009,
+  author = {Haldiman, Niklaus and Denker, Marcus and Nierstrasz, Oscar},
+  title = {Practical, Pluggable Types for a Dynamic Language},
+  journal = {Comput. Lang. Syst. Struct.},
+  issue_date = {April, 2009},
+  volume = {35},
+  number = {1},
+  month = 4,
+  year = {2009},
+  issn = {1477-8424},
+  pages = {48--62},
+  numpages = {15},
+  url = {http://dx.doi.org/10.1016/j.cl.2008.06.003},
+  doi = {10.1016/j.cl.2008.06.003},
+  acmid = {1412798},
+  publisher = {Elsevier Science Publishers B. V.},
+  address = {Amsterdam, The Netherlands, The Netherlands},
+  keywords = {Dynamic languages, Programming languages, Type systems},
+} 
+
+% Misc
+@misc{Hanov,
+  author = {Steve Hanov},
+  title = {Type Inference Using the Cartesian Product Algorithm on a Dynamically Typed Language},
+  note = {University of Waterloo},
+  url = {http://stevehanov.ca/cs744_type_inference_project.pdf}
+}
+
+@inproceedings{Igarashi2006,
+ author = {Igarashi, Atsushi and Nagira, Hideshi},
+ title = {Union Types for Object-oriented Programming},
+ booktitle = {Proceedings of the 2006 ACM Symposium on Applied Computing},
+ series = {SAC '06},
+ year = {2006},
+ isbn = {1-59593-108-2},
+ location = {Dijon, France},
+ pages = {1435--1441},
+ numpages = {7},
+ url = {http://doi.acm.org/10.1145/1141277.1141610},
+ doi = {10.1145/1141277.1141610},
+ acmid = {1141610},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {java, language design, language semantics, subtyping, union types},
+}
+
+@inproceedings{Aiken1991,
+ author = {Aiken, Alex and Murphy, Brian},
+ title = {Static Type Inference in a Dynamically Typed Language},
+ booktitle = {Proceedings of the 18th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+ series = {POPL '91},
+ year = {1991},
+ isbn = {0-89791-419-8},
+ location = {Orlando, Florida, USA},
+ pages = {279--290},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/99583.99621},
+ doi = {10.1145/99583.99621},
+ acmid = {99621},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
