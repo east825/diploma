@@ -21,7 +21,7 @@ preview-pdf: default
 	$(PDF_VIEWER) $(TARGET).pdf
 
 track-pdf: 
-	latexmk -pdf -pvc $(TARGET) &
-	$(PDF_VIEWER) $(TARGET).pdf
+	latexmk -pdf -pvc $(TARGET)
+	# $(PDF_VIEWER) $(TARGET).pdf
 
 include include/latex.mk
