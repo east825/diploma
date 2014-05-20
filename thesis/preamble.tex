@@ -15,6 +15,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 % \usepackage{minted}
+\usepackage{hyperref}
 
 % Компактные списки
 \usepackage{mdwlist}
@@ -24,6 +25,15 @@
 
 % Листинги
 \usepackage{listings}
+\lstset{%
+  language=Python,
+  basicstyle=\small,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  % see www.bollchen.de/blog/wp-content/uploads/2011/04/linebreak.tex
+  postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow\space}} 
+} 
 
 % TODOs
 \usepackage[%
