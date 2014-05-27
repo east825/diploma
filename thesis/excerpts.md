@@ -1,5 +1,11 @@
 Dynamic typing vs. Static typing
 --------------------------------
+G. Steel (referenced by M. Furr, B. Cannon)
+
+    A dynamic language is one that defers as many decisions as possible to
+    runtime.
+    
+
 M. Furr - Static Type Inference in Ruby:
 
     Dynamic typing is appealing because it ensures that no correct program exe-
@@ -110,6 +116,25 @@ M. Salib - Faster than C: static type inference with Starkiller
     algorithm that Haskell relies upon cannot handle such nonlocal usage. This
     limitation stems directly from Hindley-Milner’s focus on incremental
     inference rather than whole program analysis.
+
+Type systems
+------------
+
+B. Pierce - Types and programming languages
+
+    A type system is a tractable syntactic method for proving the absence of
+    certain program behaviors by classifying phrases according to the kinds of
+    values they compute.
+
+    Retrofitting a type system onto a language not designed with typechecking
+    in mind can be tricky; ideally, language design should go hand-in-hand with
+    type system design.  One reason for this is that languages without type
+    systems—even safe, dy- namically checked languages—tend to offer features
+    or encourage program- ming idioms that make typechecking difficult or
+    infeasible. Indeed, in typed languages the type system itself is often
+    taken as the foundation of the de- sign and the organizing principle in
+    light of which every other aspect of the design is considered.
+
 
 Optimizations
 -------------
