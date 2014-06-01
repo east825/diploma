@@ -9,22 +9,29 @@
 
 % Настройка листингов
 \renewcommand{\lstlistingname}{Листинг}
-\lstdefinestyle{java}{
+% \lstdefinestyle{java}{
+  % extendedchars={true},
+  % inputencoding={utf8},
+  % language={Java},
+  % basicstyle={\ttfamily \scriptsize},
+  % keywordstyle={\rmfamily \bfseries},
+  % commentstyle={\rmfamily \itshape},
+  % tabsize={2},
+  % numbers={left},
+  % frame={single},
+  % showstringspaces={false},
+  % breaklines={true},
+% }
+\lstset{%
+  language=Python,
   extendedchars={true},
   inputencoding={utf8},
-  language={Java},
   basicstyle={\ttfamily \scriptsize},
   keywordstyle={\rmfamily \bfseries},
   commentstyle={\rmfamily \itshape},
   tabsize={2},
   numbers={left},
   frame={single},
-  showstringspaces={false},
-  breaklines={true},
-}
-\lstset{%
-  language=Python,
-  basicstyle=\small,
   showstringspaces=false,
   breaklines=true,
   breakatwhitespace=true,
