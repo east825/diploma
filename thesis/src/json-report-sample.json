@@ -1,0 +1,65 @@
+{
+  "indexed": {
+    "total": {
+      "functions": 1046, 
+      "classes": 359, 
+      "modules": 48, 
+      "parameters": 1323
+    }, 
+    "in_project": {
+      "functions": 327, 
+      "classes": 42, 
+      "modules": 16, 
+      "parameters": 242
+    }
+  }, 
+  "project_statistics": {
+    "additional": {
+      "max_bases": {
+        "max": 4, 
+        "data": "_abcoll.MutableMapping"
+      }
+    }, 
+    "parameters": {
+      "attributeless": {
+        "rate": 0.9256198347107438, 
+        "total": 224, 
+        "usages": {
+          "operand": {
+            "rate": 0.10267857142857142, 
+            "total": 23
+          }, 
+          "unused": {
+            "rate": 0.14285714285714285, 
+            "total": 32
+          }, 
+          "argument": {
+            "rate": 0.5892857142857143, 
+            "total": 132
+          }, 
+          "returned": {
+            "rate": 0.017857142857142856, 
+            "total": 4
+          }
+        }
+      }, 
+      "accessed_attributes": {
+        "max": 4
+      }, 
+      "scattered_type": {
+        "rate": 0.028925619834710745, 
+        "total": 7
+      }, 
+      "exact_type": {
+        "rate": 0.0371900826446281, 
+        "total": 9
+      }, 
+      "undefined_type": {
+        "rate": 0.008264462809917356, 
+        "total": 2
+      }
+    }
+  }, 
+  "project_root": "/home/east825/develop/repos/green-type/samples/lib/fn.py", 
+  "project_name": "fn.py"
+}
