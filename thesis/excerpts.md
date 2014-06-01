@@ -132,8 +132,7 @@ to the run-time behaviors of the terms in a program.
 > The word “static” is sometimes added explicitly — we speak of a “statically
 typed programming language,” for example — to distinguish the sorts of
 compile-time analyses we are considering here from the dynamic or latent
-typing found in languages such as Scheme (Sussman and Steele, 1975; Kelsey,
-Clinger, and Rees, 1998; Dybvig, 1996), where run-time type tags are used
+typing found in languages such as Scheme, where run-time type tags are used
 to distinguish different kinds of structures in the heap. *Terms like “dy-
 namically typed” are arguably misnomers and should probably be replaced by
 “dynamically checked,” but the usage is standard*.
@@ -216,7 +215,7 @@ formal discipline.
 > A *type system* is that component of a typed language that keeps track of the
 types of variables and, in general, of the types of all expressions in a
 program. Type systems are used to determine whether programs are well
-behaved (as discussed subsequently). Only program sources that comply with
+behaved. Only program sources that comply with
 a type system should be considered real programs of a typed language; the
 other sources should be discarded before they are run.
     
@@ -278,6 +277,13 @@ safe removal of most type checks and most instances of dynamic dispatch and
 dynamic binding from the generated code. Removing dynamic dispatch and
 binding leads to large performance benefits since their existence precludes
 many traditional optimization techniques, such as inlining. 
+
+### G. van Rossum - [The story of None, True and False (and an explanation of literals, keywords and builtins thrown in)](http://python-history.blogspot.ru/2013/11/story-of-none-true-false.html) 
+
+> ... there was the concern (whether founded or not) that the way name lookup in
+Python works, "evaluating" the expression None is slow, because it requires
+at least two dictionary lookups (all names are looked up in the globals dict
+before being looked up in the built-ins dict).
 
 Polymorphism
 ------------
