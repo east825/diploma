@@ -484,7 +484,8 @@ called structural.
 
 \begin{lstlisting}[
   caption={Пример нарушения инвариантов программы из-за структурной
-    эквивалентости типов.}
+    эквивалентости типов.},
+  label={lst:broken-invariant}
 ]
 class Point:
     def __init__(self, x, y):
@@ -618,7 +619,10 @@ draw called on immediate object- : unit = ()
 Простейшим примером такой функции является функция идентичности (\emph{identity
 function}) --- \texttt{id}, которая возвращает свой единственный аргумент.
 
-\begin{lstlisting}[caption={Функция идентичности.}]
+\begin{lstlisting}[
+  caption={Функция идентичности.},
+  label={lst:identity-function}
+]
 def id(x):
     return x
 \end{lstlisting}
