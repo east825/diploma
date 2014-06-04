@@ -222,7 +222,8 @@ B. Pierce не различают их, другие, например, L. Carde
 
 \begin{lstlisting}[
   language=Java,
-  caption={Гетерогенный список в Java.}
+  caption={Гетерогенный список в Java.},
+  label={lst:java-heterogeneous-collection}
 ]
 Arrays.asList(42, "foo", null).get(1).toUpperCase();
 \end{lstlisting}
@@ -233,7 +234,8 @@ Arrays.asList(42, "foo", null).get(1).toUpperCase();
 \begin{lstlisting}[
   language=Java,
   caption={Использование оператора приведения для доступа к элементу
-    гетерегогенной коллекции.}
+    гетерегогенной коллекции.},
+  label={lst:java-heterogeneous-collection-cast}
 ]
 ((String) Arrays.asList(42, "foo", null).get(1)).toUpperCase()
 \end{lstlisting}
@@ -243,7 +245,8 @@ Arrays.asList(42, "foo", null).get(1).toUpperCase();
 программиста.
 
 \begin{lstlisting}[
-  caption={Гетерогенный список в Python.}  
+  caption={Гетерогенный список в Python.},
+  label={lst:python-heterogeneous-collection}
 ]
 print([42, 'foo', None][1].upper())
 \end{lstlisting}
