@@ -11,7 +11,9 @@ TARGETFILES?=	preamble.tex \
 		chapter02.tex \
 		chapter03.tex \
 		conclusion.tex \
-		appendix01.tex
+		appendix01.tex \
+		appendix02.tex \
+		appendix03.tex
 
 PDF_VIEWER=	evince
 
