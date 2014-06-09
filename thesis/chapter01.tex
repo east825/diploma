@@ -228,7 +228,7 @@ $[-2^{31}, 2^{31}-1]$ для значения типа !int!.
 
 \begin{lstlisting}[
   language=Java,
-  caption={Гетерогенный список в Java.},
+  caption={Гетерогенный список в Java},
   label={lst:java-heterogeneous-collection}
 ]
 Arrays.asList(42, "foo", null).get(1).toUpperCase();
@@ -240,7 +240,7 @@ Arrays.asList(42, "foo", null).get(1).toUpperCase();
 \begin{lstlisting}[
   language=Java,
   caption={Использование оператора приведения для доступа к элементу
-    гетерегогенной коллекции.},
+    гетерегогенной коллекции},
   label={lst:java-heterogeneous-collection-cast}
 ]
 ((String) Arrays.asList(42, "foo", null).get(1)).toUpperCase()
@@ -251,7 +251,7 @@ Arrays.asList(42, "foo", null).get(1).toUpperCase();
 программиста.
 
 \begin{lstlisting}[
-  caption={Гетерогенный список в Python.},
+  caption={Гетерогенный список в Python},
   label={lst:python-heterogeneous-collection}
 ]
 print([42, 'foo', None][1].upper())
@@ -263,7 +263,7 @@ print([42, 'foo', None][1].upper())
 Например, в следующем примере типом переменной !x! будет считаться !str|int!.
 
 \begin{lstlisting}[
-  caption={Случай вывода тип-пересечения для переменной.}
+  caption={Случай вывода тип-пересечения для переменной}
 ]
 if random() > 0.5:
     x = 'foo'
@@ -356,7 +356,7 @@ Language Runtime (DLR).
       атак злоумышленников.
 
       \begin{lstlisting}[
-        caption={Пример использования \texttt{exec} в Python.}
+        caption={Пример использования \texttt{exec} в Python}
       ]
       exec(input('Enter statement: '))  
       \end{lstlisting}
@@ -434,7 +434,7 @@ RPython (Restricted Python)~\cite{Ancona2007}, который сохраняя �
 происходит, их имена и типы не играют роли. 
 
 \begin{lstlisting}[
-  caption={Пример ``утиной'' типизации в Python.}
+  caption={Пример ``утиной'' типизации в Python}
 ]
 class Cowboy:
     def draw(self):
@@ -500,7 +500,7 @@ called structural.
 
 \begin{lstlisting}[
   caption={Пример нарушения инвариантов программы из-за структурной
-    эквивалентости типов.},
+    эквивалентости типов},
   label={lst:broken-invariant}
 ]
 class Point:
@@ -552,7 +552,7 @@ TypeScript~\cite[]{TypeScript} --- диалекте JavaScript с опциона
 % directly
 \begin{lstlisting}[
   language={[Objective]Caml},
-  caption={Структурная эквивалентность в OCaml.},
+  caption={Структурная эквивалентность в OCaml},
   label={lst:ocaml-structural-equivalence}
 ]
 class cowboy =
@@ -576,7 +576,7 @@ let draw_something o =
 
 \begin{lstlisting}[
   language={[Objective]Caml},
-  caption={Сигнатура функци \texttt{draw\_something}.},
+  caption={Сигнатура функци \texttt{draw\_something}},
   label={lst:ocaml-function-type}
 ]
 val draw_something : < draw : 'a; .. > -> 'a = <fun>
@@ -590,7 +590,7 @@ val draw_something : < draw : 'a; .. > -> 'a = <fun>
 
 \begin{lstlisting}[
   language={[Objective]Caml},
-  caption={Использование immediate object в OCaml.},
+  caption={Использование immediate object в OCaml},
   label={lst:ocaml-immediate-object}
 ]
 # let o = object
@@ -642,7 +642,7 @@ draw called on immediate object- : unit = ()
 function}) --- \texttt{id}, которая возвращает свой единственный аргумент.
 
 \begin{lstlisting}[
-  caption={Функция идентичности.},
+  caption={Функция идентичности},
   label={lst:identity-function}
 ]
 def id(x):
@@ -703,9 +703,10 @@ def id(x):
         описывается в~\cite{Aycock2000} при помощи такой заглушки:
 
         \begin{lstlisting}[
-          caption={Пример функции-заглушки для стандртной
-            функции \texttt{abs}.}
+          caption={Пример функции-заглушки для стандартной
+            функции \texttt{abs(n)}}
           ]
+          label={lst:skeleton-sample}
 def abs(N):
     N = 123
     return N
@@ -875,7 +876,7 @@ Sphinx\footnote{\url{http://sphinx-doc.org/}} для аннотирования 
 и возвращаемого значения функции Python.
 
 \begin{lstlisting}[
-  caption={Аннотации типов в системе документации Sphinx.},
+  caption={Аннотации типов в системе документации Sphinx},
   label={lst:sphinx-type-annotation}
 ]
 def is_odd(x):
@@ -925,7 +926,7 @@ rightarrow\footnote{\url{https://github.com/kennknowles/python-rightarrow}}
 ее вызова.
 
 \begin{lstlisting}[
-  caption={Декоратор функции для проверки типа аргументов.},
+  caption={Декоратор функции для проверки типа аргументов},
   label={lst:rightarrow-decorator}
 ]
 
