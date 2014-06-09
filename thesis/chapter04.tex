@@ -16,7 +16,7 @@ syntax tree --- AST) анализируемых модулей Python. В PyChar
 разработки на базе платформы
 IntelliJ\footnote{\url{https://github.com/JetBrains/intellij-community}},
 используется специальное высокоуровневое представление содержимого программы,
-построенное поверх AST, называемое Project Structure Interface (PSI). 
+построенное поверх AST, называемое Program Structure Interface (PSI). 
 В прототипе для построения AST используется модуль !ast! стандартной библиотеки
 Python. Ввиду ограничений возможностей модуля !ast! и трудоемкости реализации на
 базе его синтаксических деревьев многих видов анализа, имеющихся в PyCharm и
@@ -53,7 +53,7 @@ Python. Ввиду ограничений возможностей модуля 
 
 
 \nomenclature{AST}{Abstract Syntax Tree}
-\nomenclature{PSI}{Project Structure Interface}
+\nomenclature{PSI}{Program Structure Interface}
 
 \section{Особенности реализации и основной цикл работы прототипа}
 \label{sec:prototype-architecture}
