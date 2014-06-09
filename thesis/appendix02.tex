@@ -1,42 +1,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{ТАБЛИЦЫ}
-\label{app:tables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{turn}{90}
-\begin{minipage}{0.69\paperheight}
-  \begin{table}[H]
-    \small
-    \caption{Состав и назначение индексов в прототипе.}
-    \label{tab:indexes-ref}
-    \begin{tabularx}{\textwidth}{ |X|X|X|X| }
-      \hline
-      Название & Ключ & Значение & Применение \\
-      \hline
-      \texttt{MODULE\_INDEX} & Квалифицированное имя модуля & Определение модуля
-      (\texttt{ModuleDef})
-      &  Кэширование проиндексированных модулей, поиск модулей при анализе импортов.
-      \\ \hline
+  \begin{minipage}{0.69\paperheight}
+    \chapter{ТАБЛИЦЫ}
+    \label{app:tables}
+    \begin{table}[H]
+      \small
+      \caption{Состав и назначение индексов в прототипе.}
+      \label{tab:indexes-ref}
+      \begin{tabularx}{\textwidth}{ |X|X|X|X| }
+        \hline
+        Название & Ключ & Значение & Применение \\
+        \hline
+        \texttt{MODULE\_INDEX} & Квалифицированное имя модуля & Определение модуля
+        (\texttt{ModuleDef})
+        &  Кэширование проиндексированных модулей, поиск модулей при анализе импортов.
+        \\ \hline
 
-      \texttt{CLASS\_INDEX} & Квалифицированное имя класса & Определение класса
-      (\texttt{ClassDef})
-      & Поиск классов при выводе типов параметров. \\ \hline 
+        \texttt{CLASS\_INDEX} & Квалифицированное имя класса & Определение класса
+        (\texttt{ClassDef})
+        & Поиск классов при выводе типов параметров. \\ \hline 
 
-      \texttt{FUNCTION\_INDEX} & Квалифицированное имя функции & Определение функции
-      (\texttt{FunctionDef}) & Поиск функций. \\ \hline
+        \texttt{FUNCTION\_INDEX} & Квалифицированное имя функции & Определение функции
+        (\texttt{FunctionDef}) & Поиск функций. \\ \hline
 
-      \texttt{PARAMETER\_INDEX} & Квалифицированное имя параметра функции & определение
-      параметра (\texttt{ParameterDef}) & Поиск параметров, определенных в проекте,
-      хранение атрибутов параметров. \\ \hline
+        \texttt{PARAMETER\_INDEX} & Квалифицированное имя параметра функции & определение
+        параметра (\texttt{ParameterDef}) & Поиск параметров, определенных в проекте,
+        хранение атрибутов параметров. \\ \hline
 
-      \texttt{CLASS\_ATTRIBUTE\_INDEX} & Имя (короткое) атрибута & Множество
-      определений классов (\texttt{ClassDef}), где 
-      объявлен атрибут с таким именем & Первоначальная выборка классов по атрибутам.
-      \\ \hline
+        \texttt{CLASS\_ATTRIBUTE\_INDEX} & Имя (короткое) атрибута & Множество
+        определений классов (\texttt{ClassDef}), где 
+        объявлен атрибут с таким именем & Первоначальная выборка классов по атрибутам.
+        \\ \hline
 
-    \end{tabularx}
-  \end{table}
-\end{minipage}
+      \end{tabularx}
+    \end{table}
+  \end{minipage}
 \end{turn}
 
 % \begin{sidewaystable}

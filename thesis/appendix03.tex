@@ -1,6 +1,4 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{ДИАГРАММЫ}
-\label{app:diagrams}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \hvFloat[%
   % floatPos=h,%
@@ -14,14 +12,16 @@
 
 % Hackity-hack to left both rotated figure and title on the same page
 \begin{turn}{90}
-\begin{minipage}{0.69\paperheight}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{fig/classes-diag.png}
-  \caption{Диаграмма классов в проекте}
-  \label{fig:classes-diag}
-\end{figure}
-\end{minipage}
+  \begin{minipage}{0.69\paperheight}
+    \chapter{ДИАГРАММЫ}
+    \label{app:diagrams}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\textwidth]{fig/classes-diag.png}
+      \caption{Диаграмма классов в проекте}
+      \label{fig:classes-diag}
+    \end{figure}
+  \end{minipage}
 \end{turn}
 
 % TODO: find out, why the heck rotfloat split title in two
