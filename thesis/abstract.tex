@@ -37,5 +37,22 @@
 }
 
 \abstractcontenten{
-  \todo{write abstract in english}
+  Precise type inference in programs written in dynamically typed languages is
+  known to be a difficult problem. Its solution can be used in a lot of areas
+  including improvement of support for these languages in integrated development
+  environments (IDE). Unfortunately existing algorithms for type inference in
+  statically typed languages as well approaches used in static analysis are
+  either not suitable for high-level dynamically typed languages like Python or
+  cannot be used in IDE for these languages due to low precision and/or
+  performance.
+
+  Because of the use of duck-typing and parametric polymorphism one the hardest
+  problems in analysis of dynamic languages is type inference of function
+  parameters. We propose an algorithm for type inference of function parameters
+  based on the notion of structural equivalence of types and information about
+  the use of parameter values in function body.  We've developed a prototype
+  that shows effectiveness of suggested approach for several open source
+  projects. We also discuss existing approaches for type inference in
+  dynamically typed languages and directions of future improvement of the
+  described method.
 }
