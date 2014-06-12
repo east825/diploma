@@ -158,8 +158,14 @@ def func(x):
 вывод типов для параметра функции будет сведен к операции пересечения таких множеств
 классов для каждого из используемых атрибутов параметра.
 
+% \[
+  % ClassesWithAttribute^*(a) = \{c: \exists base \in AllBases(c): a \in
+  % DeclaredAttributes(base) \} 
+% \]
+
+
 \[
-  suitableClasses_p = \bigcap_{\forall{a} \in AccessedAttributes(p)}
+  suitableClasses_p = \bigcap\limits_{\forall{a} \in AccessedAttributes(p)}
   ClassesWithAttribute^*(a)
 \]
 
@@ -205,7 +211,7 @@ def func(x):
 потому что все подходящие должны оказаться среди них.
 
 \[
-  candidateClasses_p = \bigcup_{\forall{a} \in AccessedAttributes(p)}
+  candidateClasses_p = \bigcup\limits_{\forall{a} \in AccessedAttributes(p)}
   ClassesWithAttribute(a)
 \]
 
@@ -260,13 +266,13 @@ def func(x):
   % \begin{algorithmic}[1]
   % \small
   % \Function{SuggestClasses}{$accessedAttributes$}
-    % \State $candidates \gets \bigcup_{\forall a \in accessedAttributes}
+    % \State $candidates \gets \bigcup\limits_{\forall a \in accessedAttributes}
     % ClassesWithAttribute(a)$
     % \State $suitable \gets \emptyset$
     % \While{$candidates \ne \emptyset$}
       % \State $class \gets Pop(candidates)$
       % \State $bases \gets ResolveBases(class)$
-      % \State $availableAttributes \gets Attributes(class) \cup \bigcup_{\forall{b} \in bases} Attributes(b)$
+      % \State $availableAttributes \gets Attributes(class) \cup \bigcup\limits_{\forall{b} \in bases} Attributes(b)$
       % \If{$accessedAttributes \subseteq availableAttributes$}
         % \State $suitable \gets suitable \cup \{candidate\}$
       % \EndIf
