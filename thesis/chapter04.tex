@@ -257,64 +257,77 @@ include = excluded/included
 builtins = audioop:ssl
 \end{lstlisting}
 
-\begin{table}[H]
-  \small
-  \caption{Параметры конфигурации анализатора.}
-  \label{tab:config-ref}
-  \begin{tabularx}{\textwidth}{ |X|X|X| }
-    \hline
-    Название параметра & Аргумент командной строки & Значение \\
-    \hline
+\begin{center}
+\begin{scriptsize}
+\begin{longtable}{|c|c|p{4cm}|}
+  % \small
+  \caption{Параметры конфигурации анализатора\label{tab:config-ref} } \\
+  \hline
+  Название параметра & Аргумент командной строки & Назначение \\
+  \hline
+  \endfirsthead
 
-    \texttt{TARGET\_NAME} & \texttt{-d}, \texttt{-{}-dump-params} & Вывести
-    в конце параметры функций в проект. Параметры можно отфильтровать по
-    квалифицированному имени при помощи параметра \texttt{TARGET\_NAME}.
-    \\ \hline
+  \multicolumn{3}{r}{\normalsize Продолжение табл. \thetable} \\
+  \hline
+  Название параметра & Аргумент командной строки & Значение \\
+  \hline
+  \endhead
+  
+  \hline
+  \endfoot
+  \hline
+  \endlastfoot
 
-    \texttt{TARGET\_NAME} & \texttt{-t}, \texttt{-{}-target} &  Фильтрация
-    объектов, отображаемых в статистике по префиксу квалифицированного имени.
-    \\ \hline
+  \texttt{TARGET\_NAME} & \texttt{-d}, \texttt{-{}-dump-params} & Вывести
+  в конце параметры функций в проект. Параметры можно отфильтровать по
+  квалифицированному имени при помощи параметра \texttt{TARGET\_NAME}.
+  \\ \hline
 
-    \texttt{VERBOSE} & \texttt{-v}, \texttt{-{}-verbose} & Режим подробного
-    (\emph{verbose}) вывода, включающего дополнительные сообщения о работе
-    анализатора.
-    \\ \hline
+  \texttt{TARGET\_NAME} & \texttt{-t}, \texttt{-{}-target} &  Фильтрация
+  объектов, отображаемых в статистике по префиксу квалифицированного имени.
+  \\ \hline
 
-    \texttt{FOLLOW\_IMPORTS} & \texttt{-L}, \texttt{-{}-follow-imports} & 
-    В процессе индексации проекта индексируются также импортируемые модули.
-    Таким образом, например, классы определенные в зависимостях проекта и
-    стандартной библиотеке включаются в индексы сразу и используются при подборе
-    классов для параметров.
-    \\ \hline
+  \texttt{VERBOSE} & \texttt{-v}, \texttt{-{}-verbose} & Режим подробного
+  вывода, включающего дополнительные сообщения о работе
+  анализатора.
+  \\ \hline
 
-    \texttt{ANALYZE\_BUILTINS} & \texttt{-B}, \texttt{-{}-no-builtins} &
-    Рефлексивно анализировать встроенные (скомпилированные) модули стандартной
-    библиотеки.
-    \\ \hline
+  \texttt{FOLLOW\_IMPORTS} & \texttt{-L}, \texttt{-{}-follow-imports} & 
+  В процессе индексации проекта индексируются также импортируемые модули.
+  Таким образом, например, классы определенные в зависимостях проекта и
+  стандартной библиотеке включаются в индексы сразу и используются при подборе
+  классов для параметров.
+  \\ \hline
 
-    \texttt{BUILTINS} & --- & Список встроенных модулей для рефлексивной
-    индексации.
-    \\ \hline
-    
-    \texttt{SOURCE\_ROOTS} & \texttt{-{}-src-roots} & Корневые каталоги проекта.
-    Необходимы для поиска модулей по имени.  
-    \\ \hline
+  \texttt{ANALYZE\_BUILTINS} & \texttt{-B}, \texttt{-{}-no-builtins} &
+  Рефлексивно анализировать встроенные (скомпилированные) модули стандартной
+  библиотеки.
+  \\ \hline
 
-    \texttt{EXCLUDE} & \texttt{-{}-exclude} & Файлы и каталоги, исключаемые из
-    процесса индексации.
-    \\ \hline
+  \texttt{BUILTINS} & --- & Список встроенных модулей для рефлексивной
+  индексации.
+  \\ \hline
 
-    \texttt{INCLUDE} & \texttt{-{}-include} & Файлы и каталоги, включаемые в
-    процесс индексации. Имеет приоритет над путями, указанными в параметре
-    \texttt{EXCLUDE}.
-    \\ \hline
+  \texttt{SOURCE\_ROOTS} & \texttt{-{}-src-roots} & Корневые каталоги проекта.
+  Необходимы для поиска модулей по имени.  
+  \\ \hline
 
-    \texttt{TARGET\_PATH} & обязательный аргумент & Начальный каталог или
-    конкретный модуль, с которого начинается анализ проекта.
-    \\ \hline
+  \texttt{EXCLUDE} & \texttt{-{}-exclude} & Файлы и каталоги, исключаемые из
+  процесса индексации.
+  \\ \hline
 
-  \end{tabularx}
-\end{table}
+  \texttt{INCLUDE} & \texttt{-{}-include} & Файлы и каталоги, включаемые в
+  процесс индексации. Имеет приоритет над путями, указанными в параметре
+  \texttt{EXCLUDE}.
+  \\ \hline
+
+  \texttt{TARGET\_PATH} & обязательный аргумент & Начальный каталог или
+  конкретный модуль, с которого начинается анализ проекта.
+  \\ \hline
+
+\end{longtable}
+\end{scriptsize}
+\end{center}
 
 \section{Собираемая статистика}
 \label{sec:statistics-collecting}
