@@ -1,0 +1,20 @@
+Total indexed: 49 modules, 363 classes, 1047 functions with 1309 parameters
+In project: 16 modules, 42 classes, 327 functions with 239 parameters
+Parameters statistic:
+  223 (93.31%) parameters have no attributes (types cannot be inferred):
+  However, of them:
+    - 58.74% passed as arguments to other function
+    - 10.31% used as operands in arithmetic or logical expressions
+    - 1.79% returned from function
+    - 14.35% unused
+  0 (0.00%) parameters with accessed attributes, but with no inferred type,
+  9 (3.77%) parameters with accessed attributes and exactly one inferred type,
+  7 (2.93%) parameters with accessed attributes and more than one inferred type
+
+Additional statistics:
+  class_bases: min=0 (__builtin__.object) max=5 (_abcoll.MutableSet) mean=1.51818181818
+  total_project_parameters: 498
+  total_project_parameter_refs: 349
+  total_candidates: min=0 ([]) max=27 ([u'__getitem__']) mean=0.460251046025
+  total_project_expressions: 8349
+  initial_candidates: min=0 ([]) max=27 ([u'__getitem__']) mean=0.460251046025

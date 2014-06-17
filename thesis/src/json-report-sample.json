@@ -1,44 +1,68 @@
 {
   "indexed": {
     "total": {
-      "functions": 1046, 
-      "classes": 359, 
-      "modules": 48, 
-      "parameters": 1323
+      "functions": 1047, 
+      "classes": 363, 
+      "modules": 49, 
+      "parameters": 1309
     }, 
     "in_project": {
       "functions": 327, 
       "classes": 42, 
       "modules": 16, 
-      "parameters": 242
+      "parameters": 239
     }
   }, 
   "project_statistics": {
     "additional": {
-      "max_bases": {
-        "max": 4, 
-        "data": "_abcoll.MutableMapping"
+      "class_bases": {
+        "max": 5, 
+        "max_meta": "_abcoll.MutableSet", 
+        "min": 0, 
+        "min_meta": "__builtin__.object", 
+        "mean": 1.518181818181818
+      }, 
+      "total_project_parameters": 498, 
+      "total_project_parameter_refs": 349, 
+      "total_candidates": {
+        "max": 27, 
+        "max_meta": [
+          "__getitem__"
+        ], 
+        "min": 0, 
+        "min_meta": [], 
+        "mean": 0.4602510460251046
+      }, 
+      "total_project_expressions": 8349, 
+      "initial_candidates": {
+        "max": 27, 
+        "max_meta": [
+          "__getitem__"
+        ], 
+        "min": 0, 
+        "min_meta": [], 
+        "mean": 0.4602510460251046
       }
     }, 
     "parameters": {
       "attributeless": {
-        "rate": 0.9256198347107438, 
-        "total": 224, 
+        "rate": 0.9330543933054394, 
+        "total": 223, 
         "usages": {
           "operand": {
-            "rate": 0.10267857142857142, 
+            "rate": 0.1031390134529148, 
             "total": 23
           }, 
           "unused": {
-            "rate": 0.14285714285714285, 
+            "rate": 0.14349775784753363, 
             "total": 32
           }, 
           "argument": {
-            "rate": 0.5892857142857143, 
-            "total": 132
+            "rate": 0.5874439461883408, 
+            "total": 131
           }, 
           "returned": {
-            "rate": 0.017857142857142856, 
+            "rate": 0.017937219730941704, 
             "total": 4
           }
         }
@@ -47,16 +71,16 @@
         "max": 4
       }, 
       "scattered_type": {
-        "rate": 0.028925619834710745, 
+        "rate": 0.029288702928870293, 
         "total": 7
       }, 
       "exact_type": {
-        "rate": 0.0371900826446281, 
+        "rate": 0.03765690376569038, 
         "total": 9
       }, 
       "undefined_type": {
-        "rate": 0.008264462809917356, 
-        "total": 2
+        "rate": 0, 
+        "total": 0
       }
     }
   }, 
