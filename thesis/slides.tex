@@ -1,6 +1,6 @@
 % vim: fileencoding=utf-8
 
-\documentclass{beamer}
+\documentclass[handout]{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
@@ -88,7 +88,7 @@
 
 \begin{frame}[fragile]
   \frametitle{Пример ошибки типа}
-  \framesubtitle{Обращение к несуществующему методу}
+  \framesubtitle{Обращение к несуществующему методу класса}
 
   \begin{lstlisting}[
     label={lst:type-error-sample},
@@ -238,10 +238,7 @@
 
 \begin{frame}
   \frametitle{Поиск унаследованных атрибутов}
-  \framesubtitle{Подход, предложенный в публицкации}
-    
-  Ищем наиболее общий класс с атрибутами \texttt{m1} и \texttt{m2}, спускаясь от
-  корня в дереве наследования классов.
+  \framesubtitle{Подход, предложенный для Smalltalk}
 
   \begin{figure}
     \begin{center}
@@ -258,10 +255,10 @@
   \begin{itemize}
       \item В Python возможно множественное наследование между классами.
 
-      \item Такая иерархия не хранится в памяти целиком: быстрый поиск классов
-        осуществляется при помощи индексов. Поддерживать подобное дерево с
-        учетом постоянно изменяемых исходных текстов проекта было бы чрезвычайно
-        трудоемко.
+      \item Такая иерархия для IDE не хранится в памяти постоянно: быстрый поиск
+        классов осуществляется при помощи индексов. Поддерживать подобную
+        структуру учетом постоянно изменяемых исходных текстов проекта
+        было бы чрезвычайно трудоемко.
   \end{itemize}
   
 \end{frame}
@@ -313,14 +310,47 @@
     AttributeName \rightarrow \{class: AttributeName \in DeclaredAttributes(class) \}
   \end{multline*}
 
-  На первом шаге алгоритма делаем предвыборку всех классов-кандидатов для
-  параметра $p$:  
-  \[
-    candidateClasses_p = \bigcup\limits_{\forall{a} \in AccessedAttributes(p)}
-    ClassesWithAttribute(a)
-  \]
+  \begin{enumerate}
+    \item На первом шаге алгоритма делаем предвыборку всех классов-кандидатов для
+      параметра $p$:  
+      \[
+        candidateClasses_p = \bigcup\limits_{\forall{a} \in AccessedAttributes(p)}
+        ClassesWithAttribute(a)
+      \]
 
-  Далее ищем унаследованные атрибуты, исключая из множества неподходящие классы.
+    \item Далее ищем унаследованные атрибуты, исключая из множества неподходящие классы
+      и кэшируя найденные базовые классы.
+
+    \item На последнем шаге из оставшихся классов исключаем те, базовый класс
+      которых также находится во множнаходится во множестве..
+  \end{enumerate}
+
+
+
+    
+\end{frame}
+
+\begin{frame}
+  \frametitle{Иллюстрация работы алгоритма}
+  \begin{figure}
+    \begin{center}
+      \only<1 |handout:1>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step1.png}}
+      \only<2 |handout:2>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step2.png}}
+      \only<3 |handout:3>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step3.png}}
+      \only<4 |handout:4>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step4.png}}
+      \only<5 |handout:5>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step5.png}}
+      \only<6 |handout:6>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step6.png}}
+      \only<7 |handout:7>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step7.png}}
+      \only<8 |handout:8>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step8.png}}
+      \only<9 |handout:9>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step9.png}}
+      \only<10 |handout:10>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step10.png}}
+      \only<11 |handout:11>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step11.png}}
+      \only<12 |handout:12>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step12.png}}
+      \only<13 |handout:13>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step13.png}}
+      \only<14 |handout:14>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step14.png}}
+    \end{center}
+  \end{figure}
+
     
 \end{frame}
 

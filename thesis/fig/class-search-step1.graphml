@@ -42,7 +42,7 @@
           <y:Geometry height="48.0" width="100.0" x="150.0" y="111.0"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="13.90869140625" x="43.045654296875" y="3.0">B<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="14.06103515625" x="42.969482421875" y="3.0">A<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -61,9 +61,9 @@
       <data key="d6">
         <y:UMLClassNode>
           <y:Geometry height="48.0" width="100.0" x="50.0" y="236.0"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="14.06103515625" x="42.969482421875" y="3.0">A<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="13.90869140625" x="43.045654296875" y="3.0">B<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -124,7 +124,7 @@
       <data key="d6">
         <y:UMLClassNode>
           <y:Geometry height="62.0" width="100.0" x="400.0" y="111.0"/>
-          <y:Fill color="#FFCC00" color2="#000000" transparent="false"/>
+          <y:Fill color="#C0C0C0" color2="#000000" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="14.791015625" x="42.6044921875" y="3.0">D<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
