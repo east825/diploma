@@ -28,4 +28,8 @@ track-pdf:
 	latexmk -pdf -pvc $(TARGET)
 	# $(PDF_VIEWER) $(TARGET).pdf
 
+slides:	slides.tex
+	$(PDFLATEX) slides.tex
+	
+
 include include/latex.mk

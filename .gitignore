@@ -16,6 +16,8 @@
 *.ilg
 *.nls
 *.bbl
+*.nav
+*.snm
 
 *.pdf
 *.dvi
