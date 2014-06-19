@@ -29,6 +29,12 @@
   escapechar=\%
 } 
 
+\usepackage{algpseudocode} 
+\usepackage{algorithm} 
+\floatname{algorithm}{Алгоритм}
+
+\usepackage{tabularx}
+
 %% Preamble
 
 \usetheme{Madrid}
@@ -324,10 +330,6 @@
     \item На последнем шаге из оставшихся классов исключаем те, базовый класс
       которых также находится во множнаходится во множестве..
   \end{enumerate}
-
-
-
-    
 \end{frame}
 
 \begin{frame}
@@ -350,8 +352,100 @@
       \only<14 |handout:14>{\includegraphics[width=0.7\paperwidth]{fig/class-search-step14.png}}
     \end{center}
   \end{figure}
+\end{frame}
 
-    
+\begin{frame}[fragile]
+  \frametitle{Алгоритм}
+
+  \begin{algorithm}[H]
+    % \caption{Алгоритм подбора классов по структурному типу.}
+    % \label{lst:algorithm-pseudocode}
+    \begin{algorithmic}[1]
+    \scriptsize
+    \Function{SuggestClasses}{$accessedAttributes$}
+      \State $candidates \gets \bigcup\limits_{\forall a \in accessedAttributes}
+      ClassesWithAttribute(a)$
+      \State $suitable \gets \emptyset$
+      \While{$candidates \ne \emptyset$}
+        \State $class \gets Pop(candidates)$
+        \State $bases \gets ResolveBases(class)$
+        \State $availableAttributes \gets Attributes(class) \cup \bigcup\limits_{\forall{b} \in bases} Attributes(b)$
+        \If{$accessedAttributes \subseteq availableAttributes$}
+          \State $suitable \gets suitable \cup \{candidate\}$
+        \EndIf
+      \EndWhile
+      \ForAll{$class \in suitable$}
+        \ForAll{$base \in ResolveBases(class)$}
+          \If{$base \in suitable$}
+            \State $suitable = suitable \setminus \{ class \}$
+            \State \textbf{break}
+          \EndIf
+        \EndFor
+      \EndFor
+    \State \textbf{return} $suitable$
+    \EndFunction
+    \end{algorithmic}
+  \end{algorithm}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Прототип}
+
+  \begin{itemize}
+      \item Для проверки характеристик предлагаемого подхода был разработан прототип.
+
+      \item Прототип написан на Python и использует модуль \texttt{ast} для
+        синтаксического разбора и построения абстрактных синтаксических деревьев
+        (AST).
+
+      \item Было проанализировано 60+ проектов на Python.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Собираемые данные}
+  \framesubtitle{Django}
+
+  \begin{table}[H]
+    \scriptsize
+
+    \begin{tabularx}{\textwidth}{ |X|X| }
+      \hline
+
+      \bfseries Измеряемая характеристика & \bfseries Значение
+
+      \\ \hline
+
+      Число параметров в проекте & 9457 
+      \\ \hline
+      Параметры без чтений атрибутов & 7378 (78.02\%) 
+      \\ \hline
+      Параметры с атрибутом, но без выведенного типа & 180 (1.90\%) 
+      \\ \hline
+      Параметры с одиним выведенным типом & 523 (5.53\%) 
+      \\ \hline
+      Параметры с несколькими выведенными типами & 1376 (14.55\%) 
+      \\ \hline
+
+      Максимальное число базовых классов & 7 
+      \\ \hline
+      Максимальное число с одим из использованных атрибутов & 210 
+      \\ \hline
+      Максимальное число использованных атрибутов параметра & 11 
+      \\ \hline
+      Максимальное число предложенных классов & 106 (атрибут \texttt{name}) 
+      \\ \hline
+
+      Среднее время вывода всех параметров & 688 мс (максимум 15 мс на параметр)
+      \\ \hline
+
+      Среднее время вывода всех параметров (кэш базовых классов сбрасывается
+      после каждого) & 5104 мс (максимум 19 мс на параметр)
+      \\ \hline
+
+    \end{tabularx}
+  \end{table}
 \end{frame}
 
 \end{document}
